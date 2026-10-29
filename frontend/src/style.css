@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* html tailus ui */
+@layer base {
+  :root {
+    --primary: 22 23% 57%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 20% 97%;
+    --secondary-foreground: 218 18% 15%;
+    --stone-accent: 22 23% 57%;
+    --stone-accent-light: 22 23% 67%;
+    --stone-accent-dark: 22 23% 47%;
+    --stone-cream: 40 20% 97%;
+    --stone-beige: 35 15% 94%;
+    --stone-warm: 30 10% 92%;
+    --neutral-gray: 340 2% 56%;
+    --dark-charcoal: 218 18% 15%;
+    --dark-charcoal-light: 218 18% 25%;
+    --background: 0 0% 100%;
+    --foreground: 218 18% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 218 18% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 218 18% 15%;
+    --muted: 35 15% 94%;
+    --muted-foreground: 340 2% 56%;
+    --accent: 22 23% 57%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 10% 88%;
+    --input: 30 10% 88%;
+    --ring: 22 23% 57%;
+    --radius: 0.25rem;
+    --font-serif: "Playfair Display", Georgia, serif;
+    --font-sans: "Inter", system-ui, sans-serif;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+      0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --transition-fast: 0.15s ease-in-out;
+    --transition-base: 0.3s ease-in-out;
+    --transition-slow: 0.5s ease-in-out;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+}
+
+@layer components {
+  /* Global lists (menus, UI, footer, etc.) */
+  ul,
+  ol {
+    @apply list-none m-0 p-0;
+  }
+
+  /* Entry content lists (posts & pages) */
+  .entry-content ul {
+    @apply list-disc pl-6 mb-6;
+  }
+
+  .entry-content ol {
+    @apply list-decimal pl-6 mb-6;
+  }
+
+  .entry-content li {
+    @apply mb-2;
+  }
+
+  /*
+  * Buttons
+  */
+  .btn {
+    @apply inline-flex items-center justify-center
+            px-6 py-3
+            text-sm font-medium uppercase tracking-wide
+            rounded-md
+            transition-colors duration-300 ease-in-out
+            focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary text-primary-foreground;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-solid border-black text-black bg-transparent hover:bg-black hover:text-white;
+  }
+
+  .btn-outline-light {
+    @apply btn border-2 border-solid border-white text-white bg-transparent hover:bg-white hover:text-black;
+  }
+  /*
+  ** Hero overlay
+  */
+  .hero-overlay {
+    @apply absolute inset-0;
+
+    background: linear-gradient(
+      to right,
+      hsl(var(--dark-charcoal) / 0.85) 0%,
+      hsl(var(--dark-charcoal) / 0.6) 40%,
+      hsl(var(--dark-charcoal) / 0.2) 70%,
+      transparent 100%
+    );
+  }
+
+  /*
+  ** Contact Form
+  */
+  #contact form label {
+    @apply block text-sm font-semibold;
+  }
+
+  #contact form label span {
+    @apply mt-2 block;
+  }
+
+  #contact form input:not([type="checkbox"]) {
+    @apply w-full px-4 py-3
+           border border-solid border-border rounded-xl
+           focus:outline-none
+           focus:ring-2 focus:ring-border-focus
+           focus:border-border-focus
+           transition-all;
+  }
+
+  #contact form textarea {
+    @apply w-full max-h-32 px-4 py-3
+           border border-solid border-border rounded-xl
+           focus:outline-none
+           focus:ring-2 focus:ring-border-focus
+           focus:border-border-focus
+           resize-none
+           transition-all;
+  }
+
+  #contact form fieldset {
+    @apply mb-8 rounded-xl;
+  }
+
+  #contact form fieldset span.service-checkbox {
+    @apply flex flex-col;
+  }
+
+  #contact form fieldset span.service-checkbox > span {
+    @apply ml-0;
+  }
+
+  #contact form fieldset span.service-checkbox > span label {
+    @apply flex items-center gap-3 p-4
+           border border-solid border-border rounded-xl
+           cursor-pointer
+           hover:border-primary
+           transition-colors
+           mb-4;
+  }
+
+  #contact form fieldset span.service-checkbox > span label input {
+    @apply w-auto;
+  }
+
+  #contact form fieldset span.service-checkbox > span label span {
+    @apply mt-0;
+  }
+
+  #contact form input[type="submit"] {
+    @apply w-full;
+  }
+
+  /*
+  ** Scroll to top
+  */
+  #ast-scroll-top {
+    @apply flex items-center justify-center;
+  }
+}

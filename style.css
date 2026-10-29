@@ -1,0 +1,183 @@
+/**
+
+Theme Name: EML
+
+Author: Arqam Web
+
+Author URI: http://www.arqamweb.com/
+
+Description: Arqam Web is the fastest, fully customizable & beautiful theme suitable for blogs, personal portfolios and business websites. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with schema.org code integrated so search engines will love your site. Astra offers plenty of sidebar options and widget areas giving you a full control for customizations. Furthermore, we have included special features and templates so feel free to choose any of your favorite page builder plugin to create pages flexibly. Some of the other features: # WooCommerce Ready # Responsive # Compatible with major plugins # Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained & Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and beautiful theme!
+
+Version: 1.0.0
+
+License: GNU General Public License v2 or later
+
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Text Domain: arqamweb
+
+Template: astra
+
+*/
+
+/* -------------------------------------------------------------------------
+   Legal pages (Privacy Policy / Terms & Conditions)
+   Used by template/privacy-policy.php and template/terms-and-conditions.php.
+   Written as plain CSS because the prebuilt frontend/public/style.min.css
+   does not ship the list/spacing utilities these pages need.
+   ------------------------------------------------------------------------- */
+
+.eml-legal {
+    color: hsl(var(--muted-foreground));
+    line-height: 1.75;
+}
+
+.eml-legal .eml-legal-lead {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+.eml-legal .eml-legal-section {
+    margin-bottom: 2.5rem;
+    scroll-margin-top: 7rem;
+}
+
+.eml-legal .eml-legal-section h2 {
+    font-family: Georgia, serif;
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: rgb(150, 124, 101);
+    margin: 0 0 0.75rem;
+}
+
+.eml-legal .eml-legal-section h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: hsl(var(--foreground));
+    margin: 1.5rem 0 0.5rem;
+}
+
+.eml-legal .eml-legal-section p {
+    margin: 0 0 1rem;
+}
+
+.eml-legal .eml-legal-section p:last-child,
+.eml-legal .eml-legal-section ul:last-child {
+    margin-bottom: 0;
+}
+
+.eml-legal .eml-legal-section ul {
+    list-style: none;
+    margin: 0 0 1rem;
+    padding: 0;
+}
+
+.eml-legal .eml-legal-section ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.eml-legal .eml-legal-section ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 9999px;
+    background-color: rgb(150, 124, 101);
+}
+
+.eml-legal .eml-legal-section strong {
+    color: hsl(var(--foreground));
+    font-weight: 600;
+}
+
+.eml-legal .eml-legal-section a {
+    color: rgb(150, 124, 101);
+    text-decoration: underline;
+}
+
+/* Table of contents */
+
+.eml-legal-toc {
+    background-color: rgb(249, 246, 243);
+    border: 1px solid hsl(var(--border));
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.eml-legal-toc h2 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgb(150, 124, 101);
+    margin: 0 0 1rem;
+}
+
+.eml-legal-toc ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .eml-legal-toc ol {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.eml-legal-toc a {
+    display: block;
+    font-size: 0.875rem;
+    color: hsl(var(--muted-foreground));
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.eml-legal-toc a:hover {
+    color: rgb(150, 124, 101);
+}
+
+/* Contact card at the end of each legal page */
+
+.eml-legal-contact {
+    border: 1px solid hsl(var(--border));
+    border-left: 3px solid rgb(150, 124, 101);
+    border-radius: 0.5rem;
+    padding: 1.75rem;
+    margin-top: 3rem;
+    background-color: rgb(249, 246, 243);
+}
+
+.eml-legal-contact h2 {
+    font-family: Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: rgb(150, 124, 101);
+    margin: 0 0 0.75rem;
+}
+
+.eml-legal-contact p {
+    margin: 0 0 0.5rem;
+    color: hsl(var(--muted-foreground));
+}
+
+.eml-legal-contact p:last-child {
+    margin-bottom: 0;
+}
+
+.eml-legal-contact a {
+    color: rgb(150, 124, 101);
+    text-decoration: none;
+}
+
+.eml-legal-contact a:hover {
+    text-decoration: underline;
+}
