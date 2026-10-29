@@ -180,3 +180,31 @@ add_filter( 'rank_math/json_ld', function ( $data ) {
 
 	return $data;
 }, 99 );
+
+
+// AWB: print product thickness with an en dash and a unit ("15-50" -> "15–50 mm").
+// Only the output changes; the stored ACF value is left as is.
+function eml_format_thickness( $value ) {
+	if ( ! is_scalar( $value ) ) {
+		return $value;
+	}
+	$text = trim( (string) $value );
+	if ( '' === $text ) {
+		return $value;
+	}
+
+	$num = '\d+(?:[.,]\d+)?';
+
+	// Range: "15-50", "15 - 50", "15–50", "15 to 50".
+	if ( preg_match( '/^(' . $num . ')\s*(?:-|–|—|to)\s*(' . $num . ')$/iu', $text, $m ) ) {
+		return $m[1] . '–' . $m[2] . ' mm';
+	}
+
+	// Single number: "20".
+	if ( preg_match( '/^' . $num . '$/', $text ) ) {
+		return $text . ' mm';
+	}
+
+	// Anything else (already has a unit such as mm, cm or ", or free text) is printed as is.
+	return $value;
+}

@@ -296,7 +296,7 @@ while (have_posts()) :
                             'Slabs'           => eml_pf('product_slab_size_mm', ''),
                             'Tiles'           => eml_pf('product_tile_size_mm', ''),
                             'Pavers'          => eml_pf('product_pavers_size', ''),
-                            'Thickness'       => eml_pf('product_thickness_mm', ''),
+                            'Thickness'       => eml_format_thickness(eml_pf('product_thickness_mm', '')),
                             'Surface Finishes' => eml_pf('product_surface_finishes', ''),
                             'Packing'         => eml_pf('product_packing', ''),
                             'FOB Ports'       => eml_pf('product_fob_port', ''),
