@@ -146,12 +146,8 @@ add_filter( 'rank_math/json_ld', function ( $data ) {
 				'name'  => 'CID Group',
 				'url'   => 'https://cidegypt.com/',
 			);
-			$data[ $key ]['address'] = array(
-				'@type'           => 'PostalAddress',
-				'streetAddress'   => '9 Omar Ibn ElKhattab St., branched from El Nasr Road, Ramo Buildings, 9th floor, Office #904',
-				'addressLocality' => 'Nasr City, Cairo',
-				'addressCountry'  => 'EG',
-			);
+			// No office address in the schema: it is published on cidegypt.com only.
+			unset( $data[ $key ]['address'] );
 			$data[ $key ]['telephone'] = '+20 100 164 9770';
 			$data[ $key ]['email']     = 'info@egyptian-marble.com';
 		}

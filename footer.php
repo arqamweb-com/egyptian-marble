@@ -66,7 +66,6 @@ if (!function_exists('eml_footer_nav_menu')) {
                 <h3 class="font-serif text-2xl font-medium mb-6 text-stone-cream">Egyptian Marble &amp; Limestone</h3>
                 <div class="space-y-3 text-sm text-stone-cream/70">
                     <p>Egyptian Marble &amp; Limestone</p>
-                    <p>9 Omar Ibn ElKhattab St., branched from El Nasr Road, Ramo Buildings, 9th floor, Office #904, Nasr City, Cairo, Egypt</p>
                     <p class="text-stone-accent">Phone &amp; WhatsApp: <a href="https://wa.me/201001649770" target="_blank" rel="noopener">+20 100 164 9770</a></p>
                     <p><a href="mailto:info@egyptian-marble.com">info@egyptian-marble.com</a></p>
                 </div>

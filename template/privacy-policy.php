@@ -161,7 +161,6 @@ HTML
                         <h2>Contact Us</h2>
                         <p>If you have a question about this page, please get in touch:</p>
                         <p><strong>EML (Egyptian Marble &amp; Limestone)</strong></p>
-                        <p>9 Omar Ibn ElKhattab St., branched from El Nasr Road, Ramo Buildings, 9th floor, Office #904, Nasr City, Cairo, Egypt</p>
                         <p>Email: <a href="mailto:<?php echo esc_attr($eml_email); ?>"><?php echo esc_html($eml_email); ?></a></p>
                         <p>Phone and WhatsApp: <a href="tel:+201001649770">+20 100 164 9770</a></p>
                     </div>
