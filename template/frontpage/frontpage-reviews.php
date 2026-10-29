@@ -1,3 +1,4 @@
+<?php if (apply_filters('eml_show_home_testimonials', false)) : ?>
 <section class="py-20 bg-stone-cream">
     <div class="ast-container">
         <div class="text-center mb-12" style="opacity: 1; transform: none;">
@@ -71,3 +72,4 @@
         </div>
     </div>
 </section>
+<?php endif; ?>
